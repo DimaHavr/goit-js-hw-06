@@ -11,6 +11,7 @@ const CounterPlugin = function ({
 
 CounterPlugin.prototype.getRefs = function (rootSelector) {
   const refs = {};
+
   refs.container = document.querySelector(rootSelector);
   refs.incrementBtn = refs.container.querySelector('[data-action="increment"]');
   refs.decrementBtn = refs.container.querySelector('[data-action="decrement"]');
@@ -22,16 +23,12 @@ CounterPlugin.prototype.getRefs = function (rootSelector) {
 CounterPlugin.prototype.bindEvents = function () {
   this.refs.incrementBtn.addEventListener("click", () => {
     this.increment();
-
     this.changeValue();
-    console.log(this);
   });
 
   this.refs.decrementBtn.addEventListener("click", () => {
     this.decrement();
-
     this.changeValue();
-    console.log(this);
   });
 };
 

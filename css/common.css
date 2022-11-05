@@ -35,11 +35,11 @@ button {
 .gallery .gallery__img {
   width: 640px;
   border-radius: 10px;
-  transition: transform 0.5s 0s ease-in-out, box-shadow 0.5s 0s ease-in-out;
+  transition: transform 0.3s 0s ease-in-out, box-shadow 0.5s 0s ease-in-out;
 }
 
 .gallery__img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   box-shadow: 1px 2px 8px 5px rgba(0, 0, 0, 0.2);
 }
 /* ///////////////////// */
