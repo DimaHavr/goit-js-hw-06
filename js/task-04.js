@@ -1,9 +1,9 @@
 const CounterPlugin = function ({
   rootSelector,
-  InitialValue = 0,
+  initialValue = 0,
   step = 1,
 } = {}) {
-  this.value = InitialValue;
+  this.value = initialValue;
   this.step = step;
   this.refs = this.getRefs(rootSelector);
   this.bindEvents();
