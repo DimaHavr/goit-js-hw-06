@@ -1,8 +1,11 @@
 const inputEl = document.querySelector("#name-input");
 const nameEl = document.querySelector("#name-output");
-const headlineEl = document.querySelector("h1");
 
-inputEl.addEventListener("change", (event) => {
-  nameEl.textContent = inputEl.value;
-  headlineEl.textContent = inputEl.value;
+inputEl.addEventListener("input", (event) => {
+  const inputName = inputEl.value.trim();
+  if (inputName.length === 0) {
+    nameEl.textContent = "Anonymous";
+  } else {
+    nameEl.textContent = inputEl.value;
+  }
 });
